@@ -16,5 +16,11 @@ export class AppComponent {
     var seconde = this.mylogin.login('admin', 'admin2');
     console.log(first);
     console.log(seconde);
+    
   }
+
+  show() {
+    console.log(this.nom);
+  }
+
 }
