@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from './Services/login.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-dream-app';
+
+  constructor(private mylogin:LoginService) {
+    
+    var first = this.mylogin.login('admin', 'admin');
+    var seconde = this.mylogin.login('admin', 'admin2');
+    console.log(first);
+    console.log(seconde);
+  }
 }
