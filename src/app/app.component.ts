@@ -8,6 +8,7 @@ import { LoginService } from './Services/login.service';
 })
 export class AppComponent {
   title = 'my-dream-app';
+  nom:string = 'my name is';
 
   constructor(private mylogin:LoginService) {
     
