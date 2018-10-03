@@ -10,11 +10,13 @@ export class LoginformComponent  {
 
   lg_username: string;
   lg_password: string;
+  status:boolean;
 
   constructor(private mylogin: LoginService) { }
 
   login() {
     var result = this.mylogin.login(this.lg_username, this.lg_password);
+    this.status = result;
     console.log(result);
   }
 

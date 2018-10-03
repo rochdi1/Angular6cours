@@ -20,7 +20,18 @@
 				</div>
 				<button type="submit" class="login-button" (click)="login()"><i class="fa fa-chevron-right"></i></button>
 			</div>
-		</form>
+    </form>
+  <!--
+    <p *ngIf="status"> user has been login</p>
+    <p *ngIf="!status"> user name or password are not correct</p>
+  -->
+
+    <p *ngIf="status; else error"> user has been login</p>
+    <ng-template #error>
+          <p > user name or password are not correct</p>
+    </ng-template>
+
+
 	</div>
 	<!-- end:Main Form -->
 </div>
