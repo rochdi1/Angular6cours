@@ -1,0 +1,11 @@
+<!--component html goes here -->
+<h1>ngFor Data</h1>
+<button (click)="loadnames()">Load name</button>
+<div>
+<table>
+  <tr *ngFor="let name of names">
+    <td>id: {{name.id}}</td>
+    <td>name: {{name.name}}</td>
+  </tr>
+</table>
+</div>

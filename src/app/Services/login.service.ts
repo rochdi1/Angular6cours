@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginService {
-
+  name: string;
   constructor() { }
 
   login(user, pass){
@@ -14,4 +14,16 @@ export class LoginService {
       return false;
     }
   }
+
+  load() {
+    var data = [];
+    for(let i = 0;i < 10; i++) {
+      var item = {id: i, name: "name" + i};
+      data.push(item);
+
+    }
+    return data;
+  }
+
+
 }
