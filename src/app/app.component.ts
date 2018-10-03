@@ -8,19 +8,24 @@ import { LoginService } from './Services/login.service';
 })
 export class AppComponent {
   title = 'my-dream-app';
-  nom:string = 'my name is';
+  nom = 'my name is';
+  
 
-  constructor(private mylogin:LoginService) {
-    
-    var first = this.mylogin.login('admin', 'admin');
-    var seconde = this.mylogin.login('admin', 'admin2');
+  constructor(private mylogin: LoginService) {
+
+    // tslint:disable-next-line:prefer-const
+    let first = this.mylogin.login('admin', 'admin');
+    // tslint:disable-next-line:prefer-const
+    let seconde = this.mylogin.login('admin', 'admin2');
     console.log(first);
     console.log(seconde);
-    
+
   }
 
   show() {
     console.log(this.nom);
   }
+
+
 
 }
