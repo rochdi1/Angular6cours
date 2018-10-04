@@ -12,6 +12,7 @@ import { ContactComponent } from 'src/app/contact/contact.component';
 import { PageNotFoundComponent } from 'src/app/page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { routes } from 'src/app/app.routes';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { routes } from 'src/app/app.routes';
     NgfordataComponent,
     OtherComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

@@ -16,9 +16,13 @@
 <div>
   <h1>this is our routes</h1>
   <h2>link</h2>
-  <a [routerLink]="['/first']" >First</a><br>
-  <a [routerLink]="['/other']" >Other</a><br>
+  <!-- option Parameter -->
+  <a [routerLink]="['/first', {id:05656, name:'rochdi'}]" >First</a><br>
+  <!--Query Parameter -->
+  <a [routerLink]="['/other']" [queryParams]="{id:5454,status:true,name:'abdel'}">Other</a><br>
   <a [routerLink]="['/contact']" >Contact</a><br>
+  <a [routerLink]="['/news', id]" >News</a><br>
+  <a routerLink="/news/{{id}}" >Other News</a><br>
   <router-outlet></router-outlet>
 </div>
 

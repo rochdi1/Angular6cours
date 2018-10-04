@@ -1,5 +1,7 @@
+import { NewsComponent } from './news/news.component';
 import { Component } from '@angular/core';
 import { LoginService } from './Services/login.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,9 @@ import { LoginService } from './Services/login.service';
 export class AppComponent {
   title = 'my-dream-app';
   nom = 'my name is';
-  
+   // tslint:disable-next-line:quotemark
+   id:string = "33333";
+
 
   constructor(private mylogin: LoginService) {
 
