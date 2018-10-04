@@ -1,6 +1,7 @@
 import { NewsComponent } from './news/news.component';
 import { Component } from '@angular/core';
 import { LoginService } from './Services/login.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,9 +14,9 @@ export class AppComponent {
   nom = 'my name is';
    // tslint:disable-next-line:quotemark
    id:string = "33333";
+   status:boolean;
 
-
-  constructor(private mylogin: LoginService) {
+  constructor(private mylogin: LoginService, private myrouter: Router) {
 
     // tslint:disable-next-line:prefer-const
     let first = this.mylogin.login('admin', 'admin');
@@ -29,10 +30,22 @@ export class AppComponent {
   show() {
     console.log(this.nom);
   }
+  // Send Optional Params
+  goToFirst() {
+    this.myrouter.navigate(['/first', {id:"2135", name:"rochdi"}]);
+  }
+  // Send With Query params
+  goToOther() {
+    this.myrouter.navigate(['other'], {queryParams:{id:this.id, name:"rochdi", status:true}});
+  }
 
+  goToContact() {
 
+  }
 
-
+  goToNews() {
+    this.myrouter.navigate(['news', this.id]);
+  }
 
 
 }

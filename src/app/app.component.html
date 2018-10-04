@@ -23,6 +23,12 @@
   <a [routerLink]="['/contact']" >Contact</a><br>
   <a [routerLink]="['/news', id]" >News</a><br>
   <a routerLink="/news/{{id}}" >Other News</a><br>
+  <div>
+    <button (click)="goToFirst()">First</button>
+    <button (click)="goToOther()">Other</button>
+    <button (click)="goToContact()">Contact</button>
+    <button (click)="goToNews()">News</button>
+  </div>
   <router-outlet></router-outlet>
 </div>
 
