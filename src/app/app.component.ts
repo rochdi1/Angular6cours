@@ -1,7 +1,8 @@
-import {NewsComponent }from './news/news.component';
-import {Component }from '@angular/core';
-import {LoginService }from './Services/login.service';
-import {Router }from '@angular/router';
+import { SharedService } from './Services/shared.service';
+import {NewsComponent } from './news/news.component';
+import {Component } from '@angular/core';
+import {LoginService } from './Services/login.service';
+import {Router } from '@angular/router';
 
 
 @Component( {
@@ -16,7 +17,7 @@ nom = 'my name is';
 id:string = "33333";
 status:boolean;
 
-constructor(private mylogin:LoginService, private myrouter:Router) {
+constructor(private mylogin:LoginService, private myrouter:Router, public myShared: SharedService) {
 
 // tslint:disable-next-line:prefer-const
 let first = this.mylogin.login('admin', 'admin');

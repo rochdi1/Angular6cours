@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from 'src/app/page-not-found/page-not-found.com
 import { RouterModule } from '@angular/router';
 import { routes } from 'src/app/app.routes';
 import { NewsComponent } from './news/news.component';
+import { SharedService } from './Services/shared.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { NewsComponent } from './news/news.component';
     RouterModule.forRoot(routes)
 
   ],
-  providers: [LoginService],
+  providers: [LoginService, SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
